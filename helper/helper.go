@@ -7,6 +7,7 @@ type Response struct {
 	Data interface{} `json:"data"`
 }
 
+// ---------- Membuat meta message ----------
 type Meta struct {
 	Message string 	`json:"message"`
 	Code 	int 	`json:"code"`
@@ -28,6 +29,7 @@ func APIResponse(message string, code int, status string, data interface{}) Resp
 	return jsonResponse
 }
 
+// ---------- Format error ----------
 func FormatValidationError(err error) []string {
 	var errors []string
 		for _, e := range err.(validator.ValidationErrors) {

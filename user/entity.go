@@ -2,6 +2,7 @@ package user
 
 import "time"
 
+// ---------- Table ----------
 type User struct {
 	ID 				int
 	Name 			string

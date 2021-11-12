@@ -8,6 +8,7 @@ type UserFormatter struct {
 	Token 		string 	`json:"token"`
 }
 
+// ---------- Format untuk menampilkan di JSON ----------
 func FormatUser(user User, token string) UserFormatter {
 	formatter := UserFormatter{
 		ID: user.ID,
